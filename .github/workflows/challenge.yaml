@@ -1,0 +1,36 @@
+name: challenge-example
+
+on:
+  push:
+    branches:
+      - devops
+
+jobs:
+  job-one:
+    name: First job
+    runs-on: syr-org-v1
+    steps:
+    - name: Get Date in self host runner
+      run: date
+  job-two:
+    name: Second job
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get Date in Linux
+      run: date
+    - name: Get Name
+      run: whoami
+  job-three:
+    name: Third job
+    runs-on: windows-latest
+    steps:
+    - name: Get Date in Windows
+      run: Get-Date
+  job-four:
+    name: Fourth job
+    runs-on: macos-latest
+    steps:
+    - name: Write Info
+      run: echo all jobs run successfully
+
+    
