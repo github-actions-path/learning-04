@@ -29,6 +29,7 @@ jobs:
   job-four:
     name: Fourth job
     runs-on: macos-latest
+    needs: [job-one,job-two,job-three]
     steps:
     - name: Write Info
       run: echo all jobs run successfully
