@@ -32,6 +32,6 @@ jobs:
     needs: [job-one,job-two,job-three]
     steps:
     - name: Write Info
-      run: echo all jobs run successfully
+      run: echo all jobs ran successfully
 
     
